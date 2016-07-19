@@ -3,7 +3,7 @@
 
 Change default listening port 
 2. # vim /opt/tomcat/conf/server.xml
-...  <Connector port="8585" ...
+...  \<Connector port="8585" ...
 3. # /opt/tomcat/bin/catalina.sh start
 4. #lsof -i: 8585
 5. #
