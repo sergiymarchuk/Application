@@ -1,4 +1,4 @@
-<p>1. Add new application as new servise into system. </p>
+<p>1. Add new application as new servise into system. Centos 7 / RedHat 7</p>
 
 <pre>
 cp /opt/app/current/init.d/AppName.init.d /etc/init.d/AppName
