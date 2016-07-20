@@ -98,7 +98,14 @@ ln -s /usr/share/zoneinfo/Europe/Kiev /etc/localtime
 date
 </pre>
 
-<p>6. </p> 
+<p>6. Disk usage.</p> 
+<pre>
+du -h --max-depth=1/usr/mail/domain/ | grep M 
+
+du -sh /usr/spool/mail/
+</pre>
+
+<p>7. </p>
 <pre>
 
 </pre>
