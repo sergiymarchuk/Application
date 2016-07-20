@@ -21,6 +21,7 @@ for i in $(cat inventory); do echo $i; ssh -q $i rm -rf /home/UserName/link-nfs/
 </pre>
 
 <p>3. User Management </p>
+<pre>
 useradd UserName -d /home/UserName -s /bin/bash -G group1,appgroup -c "User.Name@domain.ext User Name Phone Number etc."
 
 Comment. -- User must change password on next attempting to login.
