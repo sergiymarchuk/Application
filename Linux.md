@@ -23,4 +23,26 @@ for i in $(cat inventory); do echo $i; ssh -q $i rm -rf /home/UserName/link-nfs/
 <p>3. User Management </p>
 useradd UserName -d /home/UserName -s /bin/bash -G group1,appgroup -c "User.Name@domain.ext User Name Phone Number etc."
 
+Comment. -- User must change password on next attempting to login.
+chage -d 0 USER-NAME 
+
+Comment. -- Get info about userID oracle.
+chage -l oracle 
+Ref. passwd -S oracle
+
+Comment. -- Change expiration day for ID oracle.
+chage -E "2025-07-31" oracle
+
+Comment. -- Change expiration day to 'never'.
+chage -I -1 -m 0 -M 99999 -E -1 testuser
+
+• -I -1 : This will set the “Password inactive” to never
+• -m 0 : This will set the minimum number of days between password change to 0
+• -M 99999 : This will set the maximum number of days between password change to 99999
+• -E -1 : This will set “Account expires” to never.
+This will disable the password expiry of a user if it is already enabled.
+
+Comment. -- Get info about iserID.
+getent passwd UID
+getent passwd USERNAME
 </pre>
