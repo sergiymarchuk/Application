@@ -19,4 +19,4 @@ for i in $(cat inventory); do echo $i; ssh -q $i mkdir ls -ld /home/UserName/lin
 for i in $(cat inventory); do echo $i; rsync -ar -e ssh /home/UserName/link-nfs/ $i:/home/UserName/link-nfs/; done
 
 for i in $(cat inventory); do echo $i; ssh -q $i rm -rf /home/UserName/link-nfs/RPM-Packege-xxx.i386.rpm /home/UserName/link-nfs/RPM-Packege-yyy.rpm; done
-<pre>
+</pre>
