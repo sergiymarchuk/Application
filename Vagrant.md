@@ -2,10 +2,11 @@
 <pre>
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+##Vagrant.configure(2) do |config|
 Vagrant.configure(2) do |config|
   config.ssh.insert_key = false
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "512"]
   end
 # Application server 1.
   config.vm.define "app1" do |app|
@@ -25,5 +26,19 @@ Vagrant.configure(2) do |config|
     db.vm.box = "geerlingguy/centos7"
     db.vm.network :private_network, ip: "192.168.55.103"
   end
+  # Haproxy server.
+  config.vm.define "hapro" do |app|
+    app.vm.hostname = "hapro-ser.ora"
+    app.vm.box = "geerlingguy/centos7"
+    app.vm.network :private_network, ip: "192.168.70.45"
+    app.vm.network :private_network, ip: "192.168.55.100"
+  end
+  # Client for app.
+  config.vm.define "client-host1" do |app|
+    app.vm.hostname = "client-host1.ora"
+    app.vm.box = "geerlingguy/centos7"
+    app.vm.network :private_network, ip: "192.168.70.73"
+  end
 end
+
 </pre>
