@@ -105,7 +105,17 @@ du -h --max-depth=1/usr/mail/domain/ | grep M
 du -sh /usr/spool/mail/
 </pre>
 
-<p>7. </p>
+<p>7. Gnome.</p>
+<pre>
+CentOS6
+Comment. --desktop install 6.7 centos
+yum -y groupinstall "X Window System"
+yum install x11 fonts
+yum -y groupinstall "Desktop"
+yum -y groupinstall "General Purpose Desktop"
+</pre>
+
+<p>8. </p>
 <pre>
 
 </pre>
