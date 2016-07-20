@@ -74,3 +74,10 @@ Additional settings for users
 /etc/libuser.conf
 /etc/default/useradd
 </pre>
+
+<p> 4. Create Random Password </p>
+<pre>
+dd if=/dev/urandom bs=1 count=20 2>/dev/null | base64
+or
+date +%s | sha256sum | base64 | head -c 32 ; echo to create a password
+</pre>
