@@ -81,3 +81,24 @@ dd if=/dev/urandom bs=1 count=20 2>/dev/null | base64
 or
 date +%s | sha256sum | base64 | head -c 32 ; echo to create a password
 </pre>
+
+<p>5. Date </p>
+<pre>
+
+date -s "28 OCT 2015 10:38:00"
+
+hwclock --show
+
+date --set="23 June 1988 10:00:00"
+date --set="10:00:00"
+
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+
+date
+</pre>
+
+<p>6. </p> 
+<pre>
+
+</pre>
