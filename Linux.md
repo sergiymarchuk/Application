@@ -7,8 +7,7 @@ chkconfig --list AppName
 service AppName status
 </pre>
 
-
-2. <p>Bash. For.<p>
+2. <p> Bash. For.</p>
 
 <pre>
  ssh host-02 'mkdir /home/UserName/link-nfs'
