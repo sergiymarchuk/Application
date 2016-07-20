@@ -25,11 +25,13 @@ for i in $(cat inventory); do echo $i; ssh -q $i rm -rf /home/UserName/link-nfs/
 useradd UserName -d /home/UserName -s /bin/bash -G group1,appgroup -c "User.Name@domain.ext User Name Phone Number etc."
 
 Comment. -- Date of expiration will be set.
-useradd -e 2025-12-31 serge
+useradd -e 2025-12-31 username
 
 
 usermod -aG new_suplemmenatry_group username
-usermod -s /sbin/nologin serge
+
+Comment. -- Setup shell sh ksh or nologin etc.
+usermod -s /sbin/nologin username
 
 Comment. -- Remove user force or remove home folder username 
 userdel -f username
