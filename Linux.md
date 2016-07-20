@@ -115,7 +115,29 @@ yum -y groupinstall "Desktop"
 yum -y groupinstall "General Purpose Desktop"
 </pre>
 
-<p>8. </p>
+<p>8. Hardware. Dmidecode. </p>
 <pre>
+Comment. --Get info about memory slots etc.
+dmidecode | grep -A 12 "Memory Device"| grep -e "Memory Device" -e "Size:" -e "Speed: " | grep -ve "Mapped Address" -ve "Range"
+
+dmidecode -t system
+
+dmidecode -t memory
+
+dmidecode -t bios
+
+dmidecode -s system-product-name
+
+dmidecode -t baseboard
+
+  bios
+  system
+  baseboard
+  chassis
+  processor
+  memory
+  cache
+  connector
+  slot
 
 </pre>
