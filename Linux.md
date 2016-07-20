@@ -1,4 +1,4 @@
-1. <p> Add new application as new servise into system. </p>
+<p>1. Add new application as new servise into system. </p>
 
 <pre>
 cp /opt/app/current/init.d/AppName.init.d /etc/init.d/AppName
@@ -7,7 +7,7 @@ chkconfig --list AppName
 service AppName status
 </pre>
 
-2. <p> Bash. For.</p>
+<p>2. Bash. For.</p>
 
 <pre>
  ssh host-02 'mkdir /home/UserName/link-nfs'
