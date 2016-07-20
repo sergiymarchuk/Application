@@ -24,6 +24,26 @@ for i in $(cat inventory); do echo $i; ssh -q $i rm -rf /home/UserName/link-nfs/
 <pre>
 useradd UserName -d /home/UserName -s /bin/bash -G group1,appgroup -c "User.Name@domain.ext User Name Phone Number etc."
 
+Comment. -- Date of expiration will be set.
+useradd -e 2025-12-31 serge
+
+
+usermod -aG new_suplemmenatry_group username
+usermod -s /sbin/nologin serge
+
+Comment. -- Remove user force or remove home folder username 
+userdel -f username
+userdel -r username
+
+Comment. --  Change primery group for username.
+groupmod -g GID username 
+
+passwd -l username
+passwd -u username
+
+Comment. -- Get day after 90 days as example.
+date -d +"90 days"
+
 Comment. -- User must change password on next attempting to login.
 chage -d 0 USER-NAME 
 
@@ -46,4 +66,9 @@ This will disable the password expiry of a user if it is already enabled.
 Comment. -- Get info about iserID.
 getent passwd UID
 getent passwd USERNAME
+
+Additional settings for users
+/etc/login.defs
+/etc/libuser.conf
+/etc/default/useradd
 </pre>
