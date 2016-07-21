@@ -626,3 +626,9 @@ mc 14134 beast cwd DIR 8,1 4096 1 /mnt/addtional-disk
 <pre>
 #mail -s logs email@mx-servername.com < server.log отправить лог 
 </pre>
+
+<p>45. rdesktop</p>
+<pre>
+rdesktop 192.168.100.55 -d domain -u user-name -p PASSWORD -f
+rdesktop extrnal-IP:3390 -d domain -u admin -p PASSWORD -f
+</pre>
