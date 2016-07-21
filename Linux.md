@@ -355,7 +355,17 @@ So you can see task
 1
 </pre>
 
-<p>19. </p>
+<p>19. Process bg fg </p>
 <pre>
+
+
+#on running process CTRL+Z
+#fg
+#jobs посик заданий
+#bg №jobs вернуть из бекраунда в интерактивный режим процесс
+#fg %1
+
+kill %n
+
 
 </pre>
