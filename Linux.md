@@ -449,7 +449,41 @@ Comment. --RES сколько использует процесс vmstat inact v
 file -s /dev/sda2 
 </pre>
 
-<p>31. </p>
+<p>31. find</p>
+<pre>
+
+
+find * -mtime +30 | xargs rm
+find * -mtime +30 | xargs rm -rf
+find /path/to/files* -mtime +5 -exec rm {} \;
+
+find /jira -type f -mtime +365 -exec mv "{}" /tmp/temporary-folder/ \;
+find /exports -type f -mtime +365 -exec mv "{}" /tmp/temporary-folder/exports \;
+
+в системе файлов с разрешениями suid и sgid. Для вывода на экран списка всех таких файлов можно использовать команду find:
+# find / -type f -perm +6000 -exec Is -I {} \;
+
+find . -name '*.xml' -type f -print | xargs du -ch  get disk usage sum for files of type
+
+find . -type f | awk -F'.' '{print $NF}' | sort| uniq -c | sort -g   look how many files in system for type
+
+find / -mount -size +5000000c -exec ls -l {} \;
+
+find /etc /home –name filename
+
+mtime число — в качестве числа можно указать количество дней, прошедших со дня последнего редактирования файла. Например, если вы вчера редактировали файл с именем note, но не помните, куда его сохранили, то выполните следующую команду:
+find / –name note –mtime 1
+
+-type тип — ключ позволяет указать тип файла. В качестве типа можно указывать:
+• d — каталог;
+• f — обычный файл;
+• p — именованный канал;
+• l — символическая ссылка.
+С помощью find можно искать не только имена файлов или директорий, но и искать по содержимому файлов. Вот вам интересная команда, которую можно запомнить или записать:
+find . –type f –name "*" –print | xargs grep "текст, который ищем"
+</pre>
+
+<p>33. </p>
 <pre>
 
 </pre>
