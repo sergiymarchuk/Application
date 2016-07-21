@@ -488,7 +488,24 @@ find . –type f –name "*" –print | xargs grep "текст, который �
 login:password@ip
 </pre>
 
-<p>34. </p>
+<p>34. fuser</p>
+<pre>
+fuser -v -n tcp 5666
+fuser -v /
+
+fuser -v -k -i ./
+                     USER        PID ACCESS COMMAND
+./:                  root      23870 ..c.. bash
+                     root      23941 ..c.. bash
+                     root      25849 ..c.. python
+Kill process 23870 ? (y/N) n
+Kill process 23941 ? (y/N) n
+Kill process 25849 ? (y/N) n
+
+Comment. --But we can type "y" :) 
+</pre>
+
+<p>35. </p>
 <pre>
 
-</pre>
+</prE>
