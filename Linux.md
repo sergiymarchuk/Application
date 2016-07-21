@@ -570,7 +570,28 @@ echo "1" > /proc/sys/net/ipv4/ip_forward
 iptables -A INPUT -s 55.225.yyy.xxx -j REJECT
 </pre>
 
-<p>40. </p>
+<p>40. limits.conf </p>
+<pre>
+Under /etc/security/limits.conf:
+oracle       soft    nofile          4096
+oracle        hard    nofile          131072
+oracle        soft    nproc           2047
+oracle        hard    nproc           32768
+
+check
+..>ulimit -n 
+</pre>
+
+<p>41. logger</p>
+<pre>
+$ logger TEST 111111 222222 33333
+
+You can see message in /var/log/message file
+tail -f /var/log/message
+
+</pre>
+
+<p>42. </p>
 <pre>
 
 </pre>
