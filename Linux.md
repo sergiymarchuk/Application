@@ -421,13 +421,19 @@ dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! 
 </pre>
 
 
-<p>27. dig</p>
+<p>27. dig host</p>
 <pre>
 # dig MX google.com
 # dig @127.0.0.1 NS sun.com # check local server
 # dig @204.97.212.10 NS MX sun.com # request to external server
 # dig AXFR @ns1.xname.org sun.com # get all zone (forwarding zone)
 # dig -x 78.31.70.238 #backresolve
+
+# host -t MX sun.com # Получить записть типа MX(Mail Exchange)
+# host -t NS -T sun.com # Получить NS запись через TCP соединение
+# host -a sun.com # Получить все
+# host 78.31.70.238 бекрезолв
+# nslookup 78.31.70.238 бекрезолв
 </pre>
 
 <p> 28. dhclient </p>
