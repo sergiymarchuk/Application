@@ -419,3 +419,18 @@ dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! 
 1% /dev/shm
 7% /boot
 </pre>
+
+
+<p>27. dig</p>
+<pre>
+# dig MX google.com
+# dig @127.0.0.1 NS sun.com # check local server
+# dig @204.97.212.10 NS MX sun.com # request to external server
+# dig AXFR @ns1.xname.org sun.com # get all zone (forwarding zone)
+# dig -x 78.31.70.238 #backresolve
+</pre>
+
+<p> 28. </p>
+<pre>
+
+</pre>
