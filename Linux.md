@@ -399,10 +399,11 @@ wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --
 <p>23. </p>
 <pre>
 Curl
+ ifconfig | cut -d " " -f 1 | sed -e /^$/d
+ ifconfig | cut -d " " -f 1 | grep -v '^$\|^#'
 
-curl -LO http://c.speedtest.net/mini/mini.zip ; rm -f mini.zip
-
-wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --post-data 'login=USERRRR&pwd=PASSSSS' http://url.domain.local/webacula/auth/login wget -O /var/www/html/status_o.html --load-cookies=/tmp/cookies.txt http://url.domain.local/webacula/job/terminated
+ cat /etc/passwd | cut -d ':' -f 1,2
+ cat /etc/passwd | cut -c 7-10
 </pre>
 
 <p>24. </p>
