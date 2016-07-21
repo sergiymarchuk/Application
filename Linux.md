@@ -234,7 +234,45 @@ $cat id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlhcNNOPNpoRBU8SEW/zn8pdpkcfp3J6Kn5Ob8J+8FVr/o1KpvzQQGLrdjwWfczEFdFim5OKQluD+wZFTP4eG7Y15pz2JmXrF3G3EnNhwGmCL1h56pAsHM5PAXhHgr9tO6Sz42eag9N4qzpEcQZlsrO4/dWMkYi/20vpIxdmDSwMJuptv30/sMRvDwPxSYfiRqi8u5qjtATtlBgtXnJp4FUBCxNFwXCQqRs5rUKjRCBKL2sVuGwFYDIhnyIP3Xg4TQku91gCkhrj9sBlRrTxs9OqaenHE/1BzHnq6l/kJ/5qwxj+Fez+lurG7GlgsEYDZizTgMkUEB6QuGPNTIbn+pQ==
 </pre>
 
-<p>13. </p>
+<p>13. TSM. </p>
+<pre>
+*  Some usefully dsmc or dsmc_afs commands follow:                               *
+*                                                                                *
+*                                                                                *
+*        - when was the latest backup?                                           *
+*  dsmc>   q fi                                                                  *
+*                                                                                *
+*        - which files from your home pwd are backed up?                         *
+*  dsmc>   q b *                                                                 *
+*                                                                                *
+*        - which old file versions from your home pwd are backed up?             *
+*  dsmc>   q b -ina *                                                            *
+*                                                                                *
+*        - simple file restore, with replace option:                             *
+*  dsmc>   restore -rep=yes /afs/desy.de/user/a/anyuser/show.html                *
+*                                                                                *
+*        - selection menu of old file versions:                                  *
+*  dsmc>   restore -ina -pick /afs/desy.de/user/a/anyuser/exp.cmz                *
+*                                                                                *
+*        - restore old file version with date limit                              *
+*  dsmc>   restore -ina -pitdate=2002.07.18  /afs/desy.de/user/a/anyuser/x.cpp   *
+*                                                                                *
+*                                                                                *
+*        - restore old directory version, with date limit and replace data       *
+*  dsmc>   restore -ina -rep=yes -subdir=yes -pitdate=2002.05.12 /afs/desy.de/user/a/anyuser/tesla/     
+*                                                                                *
+*                                                                                *
+*        - online help                                                           *
+*  dsmc>   help                                                                  *
+*                                                                                *
+*        - work done                                                             *
+*  dsmc>   quit                                                                  *
+*                                                                                *
+*                                                                                *
+*  Start the TSM/ADSM GUI with:  dsm or dsm_afs                                  * 
+</pre>
+
+<p>14. </p>
 <pre>
 
 </pre>
