@@ -555,7 +555,7 @@ git remote -v
 
 <p>38. html </p>
 <pre>
-"<html><body><h1><a href="load/name_file_2010.rar">Please clik here for starting download</h1></body></html> --> (делаем ссылку на веб)"
+.<html>.<body>.<h1>.<a href="load/name_file_2010.rar">Please clik here for starting download</h1>.</body>.</html> --> (делаем ссылку на веб)
 </pre>
 
 <p>39. iptables </p>
