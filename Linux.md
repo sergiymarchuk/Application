@@ -377,7 +377,17 @@ lsblk
 lsscsi
 </pre>
 
-<p>21. </p>
+<p>21. Cron check. </p>
 <pre>
+#!/bin/bash
+#List all cron jobs for all users
+for user in `cat /etc/passwd | cut -d":" -f1`;
+do 
+crontab -l -u $user;
+done
+</pre>
+
+<p>22. </p>
+<pre> 
 
 </pre>
