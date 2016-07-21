@@ -315,3 +315,8 @@ on windows statiion was prepared xming packege and run
 <pre>
 
 </pre>
+
+<p>16. Apt. Ununtu.<p>
+<pre>
+apt-cache search git
+</pre>
