@@ -37,6 +37,17 @@ Comment. -- Remove user force or remove home folder username
 userdel -f username
 userdel -r username
 
+
+
+groupadd test
+
+#Создать группу testgroup2 с ID 506
+groupadd -g 506 testgroup2
+
+#Создать группу testgroup3 с системным ID по умолчанию
+groupadd -r testgroup3
+
+
 Comment. --  Change primery group for username.
 groupmod -g GID username 
 
