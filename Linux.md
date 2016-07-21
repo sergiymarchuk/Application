@@ -558,7 +558,19 @@ git remote -v
 <html><body><h1><a href="load/name_file_2010.rar">Please clik here for starting download</h1></body></html>--> (делаем ссылку на веб)
 </pre>
 
-<p>39. </p>
+<p>39. iptables </p>
+<pre>
+iptables -t nat -A POSTROUTING -o eth0 (external) -j MASQUERADE
+echo "1" > /proc/sys/net/ipv4/ip_forward
+
+-A RH-Firewall-1-INPUT -i eth0 -j ACCEPT
+#Forward port 
+-A PREROUTING -d IP-SERVER-EXTERNAL -p tcp -m tcp --dport 3391 -j DNAT --to-destination 192.168.0.56:3389
+
+iptables -A INPUT -s 55.225.yyy.xxx -j REJECT
+</pre>
+
+<p>40. </p>
 <pre>
 
 </pre>
