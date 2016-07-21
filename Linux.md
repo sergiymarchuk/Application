@@ -196,3 +196,17 @@ Comment. --Reset password root MariaDB
 12. Check new password:
 13. mysql -u root -p
 </pre>
+
+<p>10. Provide hash</p>
+<pre>
+Comment. --Create password in hash view.  
+@centos6-64-p ~]$ grub-crypt
+Password:
+Retype password:
+$6$YmEr.x8G8GS6AI7t$EefHuvzesJ2uvsrGSx0RWTAUtLDK47fW/gag0TDNpukVdAa0ApkfUxoYcd7Ck0Fp6HnTQRNWLRYREP1eLqZwS1
+</pre>
+
+<p> 11. </p>
+<pre>
+
+</pre>
