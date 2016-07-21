@@ -274,5 +274,29 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlhcNNOPNpoRBU8SEW/zn8pdpkcfp3J6Kn5Ob8J+8FVr/
 
 <p>14. </p>
 <pre>
+Putty ..> Connection ..> SSS ..> Auth ..> X11 ..> Enabled X11 forwarding  (check box -- status ON)
+As example let's connect to internal linux server via ssh 
+after login Router Server checking DISPLAY value
+echo $DISPLAY
+localhost:44.0
+let go to target server 
+ssh -X target-server-name
+echo $DISPLAY
+localhost:10.0
+rpm -qa | grep x11
+...
+
+xorg-x11...
+
+...
+
+xclock
+
+P.S.
+on windows statiion was prepared xming packege and run 
+</pre>
+
+<p>15. </p>
+<pre>
 
 </pre>
