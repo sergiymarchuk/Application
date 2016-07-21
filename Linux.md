@@ -405,7 +405,14 @@ wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --
  cat /etc/passwd | cut -c 7-10
 </pre>
 
-<p>24. </p>
+<p>24. dd </p>
+<pre>
+dd if=/dev/zero of=/root/xxx1 bs = 1M count = 100    -CREATE FILE SIZE 100MB 
+dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! remeber about cache 
+
+</pre>
+
+<p>25. </p>
 <pre>
 
 </pre>
