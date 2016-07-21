@@ -435,7 +435,16 @@ dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! 
 dhclient -r eth0 //renew ip address
 </pre>
 
-<p>29. </p>
+<p>29. drop_caches </p>
+<pre>
+echo 1 > /proc/sys/vm/drop_caches
+Comment. --After this command system will be caches again and we can get slowdown
+Comment. -- Virt память что используется многими процессами если однажны какйото процес загрузил либо или можуль то из памяти другой вызывает это а не запускается все заново 
+Comment. --RES сколько использует процесс vmstat inact vmstat active
+
+</pre>
+
+<p>30. </p>
 <pre>
 
 </pre>
