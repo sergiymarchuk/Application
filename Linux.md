@@ -430,7 +430,12 @@ dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! 
 # dig -x 78.31.70.238 #backresolve
 </pre>
 
-<p> 28. </p>
+<p> 28. dhclient </p>
+<pre>
+dhclient -r eth0 //renew ip address
+</pre>
+
+<p>29. </p>
 <pre>
 
 </pre>
