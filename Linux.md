@@ -153,4 +153,42 @@ getconf PAGE_SIZE
  ps axo %mem,pid,euser,cmd | sort -nr | head -n 10 
 </pre>
 
-<p>10. </p>
+<p>10. MariaDB on Centos6</p>
+<pre>
+#Install Mariadb on centos 6
+#Prepare yum.
+#/etc/yum.repos.d/MariaDB.repo
+#add next lines
+
+[mariadb]
+name = MariaDB-5.5.39
+baseurl=https://downloads.mariadb.com/files/MariaDB/mariadb-5.5.39/yum/rhel6-amd64/
+# alternative: baseurl=http://archive.mariadb.org/mariadb-5.5.39/yum/rhel6-amd64/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+
+yum install MariaDB-server MariaDB-client
+
+create user 'root'@'10.0.2.2' identified by 'yourpassword';
+grant all privileges on *.* to 'root'@'10.0.2.2' with grant option;
+flush privileges;
+
+service mysql status
+service mysql start
+
+<p> Reset password on MariaDB</p>
+#Reset password root MariaDB
+1. sudo mysqld_safe --skip-grant-tables --skip-networking &
+2. Let login into another terminal session
+3. mysql -u root
+4. use mysql;
+5. update user set password=PASSWORD("new-password") where User='root';
+6. flush privileges;
+7. exit
+8. Lets go the first teminal 
+9. kill jobs
+10. #jobs
+11. kill %jobs
+12. Check new password:
+13. mysql -u root -p
+</pre>
