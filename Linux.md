@@ -346,3 +346,16 @@ at -c identifier_task
 
 So you can see task 
 </pre>
+
+<p>18. Bash</p>
+<pre>
+@linux:~/tmp$ true; echo $?
+0
+@linux:~/tmp$ false; echo $?
+1
+</pre>
+
+<p>19. </p>
+<pre>
+
+</pre>
