@@ -141,3 +141,16 @@ dmidecode -t baseboard
   slot
 
 </pre>
+
+<p>8. Get info about page size  </p>
+<pre>
+getconf PAGE_SIZE 
+</pre>
+
+<p>9. Process memory usage utilization.</p>
+<pre>
+ ps aux | sort -nk +4 | tail 
+ ps axo %mem,pid,euser,cmd | sort -nr | head -n 10 
+</pre>
+
+<p>10. </p>
