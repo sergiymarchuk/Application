@@ -101,7 +101,7 @@ date
 <p>6. Disk usage.</p> 
 <pre>
 du -h --max-depth=1/usr/mail/domain/ | grep M 
-
+du -h --max-depth=1 -B M |sort -rn
 du -sh /usr/spool/mail/
 </pre>
 
