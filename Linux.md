@@ -483,7 +483,12 @@ find / –name note –mtime 1
 find . –type f –name "*" –print | xargs grep "текст, который ищем"
 </pre>
 
-<p>33. </p>
+<p>33. ftp</p>
+<pre>
+login:password@ip
+</pre>
+
+<p>34. </p>
 <pre>
 
 </pre>
