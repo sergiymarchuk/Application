@@ -387,7 +387,25 @@ crontab -l -u $user;
 done
 </pre>
 
-<p>22. </p>
+<p>22. Crul. </p>
 <pre> 
+Curl
+
+curl -LO http://c.speedtest.net/mini/mini.zip ; rm -f mini.zip
+
+wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --post-data 'login=USERRRR&pwd=PASSSSS' http://url.domain.local/webacula/auth/login wget -O /var/www/html/status_o.html --load-cookies=/tmp/cookies.txt http://url.domain.local/webacula/job/terminated
+</pre>
+
+<p>23. </p>
+<pre>
+Curl
+
+curl -LO http://c.speedtest.net/mini/mini.zip ; rm -f mini.zip
+
+wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --post-data 'login=USERRRR&pwd=PASSSSS' http://url.domain.local/webacula/auth/login wget -O /var/www/html/status_o.html --load-cookies=/tmp/cookies.txt http://url.domain.local/webacula/job/terminated
+</pre>
+
+<p>24. </p>
+<pre>
 
 </pre>
