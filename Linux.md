@@ -555,7 +555,7 @@ git remote -v
 
 <p>38. html </p>
 <pre>
-.<html>.<body>.<h1>.<a href="load/name_file_2010.rar">Please clik here for starting download</h1>.</body>.</html> --> (делаем ссылку на веб)
+<html><body><h1><a href="load/name_file_2010.rar">Please clik here for starting download</h1></body></html> --> (делаем ссылку на веб)
 </pre>
 
 <p>39. iptables </p>
@@ -591,7 +591,12 @@ tail -f /var/log/message
 
 </pre>
 
-<p>42. </p>
+<p>42. ls </p>
+<pre>
+ls -l --time-style=+"%Y-%m-%d %H:%M:%S" #date and time when file was created
+</pre>
+
+<p>43. </p>
 <pre>
 
 </pre>
