@@ -596,7 +596,33 @@ tail -f /var/log/message
 ls -l --time-style=+"%Y-%m-%d %H:%M:%S" #date and time when file was created
 </pre>
 
-<p>43. </p>
+<p>43. lsof. restore file from pid etc.</p>
+<pre>
+# lsof | grep 26294 смотрим например куда писался ПИД файла как пример
+crond     26294                 root    3uW     REG               0,18         6     103393 /run/crond.pid
+если кто то удалил /run/crond.pid как пример мы можем
+# ls -l /proc/26294/fd
+lrwx------. 1 root root 64 Jul 25 02:32 3 -> /run/crond.pid
+все содержимое все еще хранится в 3 соответсвенно нужно прочитать например
+cat /proc/26294/fd/3 > /run/crond.pid в наш искомый файл или любой другой 
+
+#lsof -i :22
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+sshd     1658 root    3u  IPv4  10246      0t0  TCP *:ssh (LISTEN)
+sshd     1658 root    4u  IPv6  10248      0t0  TCP *:ssh (LISTEN)
+sshd    23868 root    3u  IPv4 260664      0t0  TCP 10.0.2.15:ssh->10.0.2.2:49600 (ESTABLISHED)
+sshd    23939 root    3u  IPv4 261039      0t0  TCP 10.0.2.15:ssh->10.0.2.2:51066 (ESTABLISHED)
+sshd    23983 root    3u  IPv4 261310      0t0  TCP 10.0.2.15:ssh->10.0.2.2:51175 (ESTABLISHED)
+
+
+lsof | grep /mnt/addtional-disk
+lsof: WARNING: can't stat() reiserfs file system /dev/.static/dev
+Output information may be incomplete.
+mc 14134 beast cwd DIR 8,1 4096 1 /mnt/addtional-disk
+
+</pre>
+
+<p>44. </p>
 <pre>
 
 </pre>
