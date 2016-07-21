@@ -505,7 +505,31 @@ Kill process 25849 ? (y/N) n
 Comment. --But we can type "y" :) 
 </pre>
 
-<p>35. </p>
+<p>35. pandoc. Git convert file to pdf format. </p>
+<pre>
+pandoc 01_vagrant.md -f markdown -t docx -o test.docx
+pandoc 01_vagrant.md -f markdown -t pdf -o test.pdf
+</pre>
+
+<p>36.git </p>
+<pre>
+mkdir myProj && cd myProj/ && git init && git pull https://github.com/sergiimarchuk/qalPY
+rm -f mountVSfstab.pyc networkCheck.pyc partiotionCheck.pyc statInfo.pyc usersCheck.pyc
+git commit -a
+git remote add origin https://github.com/sergiimarchuk/qalPY.git
+git add *
+git commit -m " Comments "
+git status
+git commit -a
+git status
+git push origin +master
+
+git config --global user.email "you@example.com"
+
+git remote -v
+</pre>
+
+<p>38. </p>
 <pre>
 
-</prE>
+</pre>
