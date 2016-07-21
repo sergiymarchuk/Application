@@ -409,6 +409,13 @@ wget -O /tmp/login.tmp --keep-session-cookies --save-cookies=/tmp/cookies.txt --
 
 <p>23. Cut</p>
 <pre>
+
+# ifconfig eth0 192.168.50.254 netmask 255.255.255.0 # Первый IP адрес
+# ifconfig eth0:0 192.168.51.254 netmask 255.255.255.0 # Второй IP адрес
+# ip addr add 192.168.50.254/24 dev eth0 # Эквивалентные команды для ip
+# ip addr add 192.168.51.254/24 dev eth0 label eth0:1
+
+
  ifconfig | cut -d " " -f 1 | sed -e /^$/d
  ifconfig | cut -d " " -f 1 | grep -v '^$\|^#'
 
