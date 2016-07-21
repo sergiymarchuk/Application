@@ -412,7 +412,10 @@ dd if=/root/xxx1 of=/dev/null bs=1M        -READ FILE  block size = 1М and !!! 
 
 </pre>
 
-<p>25. </p>
+<p>25. df</p>
 <pre>
-
+# df -hP | awk '{print $5, $6}' |  awk 'NR > 1'
+71% /
+1% /dev/shm
+7% /boot
 </pre>
