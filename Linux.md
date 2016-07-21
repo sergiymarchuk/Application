@@ -444,7 +444,12 @@ Comment. --RES сколько использует процесс vmstat inact v
 
 </pre>
 
-<p>30. </p>
+<p>30. file</p>
+<pre>
+file -s /dev/sda2 
+</pre>
+
+<p>31. </p>
 <pre>
 
 </pre>
