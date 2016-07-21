@@ -173,11 +173,15 @@ create user 'root'@'10.0.2.2' identified by 'yourpassword';
 grant all privileges on *.* to 'root'@'10.0.2.2' with grant option;
 flush privileges;
 
+CREATE USER 'serge'@'%' IDENTIFIED BY 'P!S@O#D';
+GRANT ALL PRIVILEGES ON *.* TO 'serge'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 service mysql status
 service mysql start
 
 <p> Reset password on MariaDB</p>
-#Reset password root MariaDB
+Comment. --Reset password root MariaDB
 1. sudo mysqld_safe --skip-grant-tables --skip-networking &
 2. Let login into another terminal session
 3. mysql -u root
