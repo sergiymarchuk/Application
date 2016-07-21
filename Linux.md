@@ -206,7 +206,35 @@ Retype password:
 $6$YmEr.x8G8GS6AI7t$EefHuvzesJ2uvsrGSx0RWTAUtLDK47fW/gag0TDNpukVdAa0ApkfUxoYcd7Ck0Fp6HnTQRNWLRYREP1eLqZwS1
 </pre>
 
-<p> 11. </p>
+<p> 11. SSH. </p>
+<pre>
+Comment. --Run ssh agent.
+eval `ssh-agent -s` 
+Comment. --Use key spec. path.
+ssh-add -i /path/id_rsa
+</pre>
+
+<p> 12. SSH. Convert key.</p>
+<pre>
+If client provide public key which was created by Windows puttygen, it has been converted in OpenSSH format before use in unix/linux
+
+$ cat id_rsa.pub
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "rsa-key-20151002"
+Asadasd1yc2EAAAABJQfsadshcNNOPNpoRBUsFDSDFSdffp3J6Kn5Ob
+8J+8FVr/o1KpvzQQGLrdjwWfczEFdFim5OKQDFSDFSDluD+asdpz2JmASE
+nNhwGmCL1sdfsdfw2M5PAXhHgr9tOeag9ad/dWMDSFSDFkYi/20vpI
+xdmDSwMJuptv30/sMRvDwPxSYfiasdtXnJp4FUBCSADCDSFDSFxNFwXCQqRs5r
+UKjRsacaXg4TQku91gCkhrj9sBlRrTxs9OqaenHASasSWEQWEDREFSDCWEWD
+l/kJ/5qwxj+Fez+lurG7GlgsEYDZizTgMkUEB6QuGPNTIbn+pQ==
+---- END SSH2 PUBLIC KEY ----
+
+$ ssh-keygen -i -f id_rsa.pub > id_rsa.pub
+$cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlhcNNOPNpoRBU8SEW/zn8pdpkcfp3J6Kn5Ob8J+8FVr/o1KpvzQQGLrdjwWfczEFdFim5OKQluD+wZFTP4eG7Y15pz2JmXrF3G3EnNhwGmCL1h56pAsHM5PAXhHgr9tO6Sz42eag9N4qzpEcQZlsrO4/dWMkYi/20vpIxdmDSwMJuptv30/sMRvDwPxSYfiRqi8u5qjtATtlBgtXnJp4FUBCxNFwXCQqRs5rUKjRCBKL2sVuGwFYDIhnyIP3Xg4TQku91gCkhrj9sBlRrTxs9OqaenHE/1BzHnq6l/kJ/5qwxj+Fez+lurG7GlgsEYDZizTgMkUEB6QuGPNTIbn+pQ==
+</pre>
+
+<p>13. </p>
 <pre>
 
 </pre>
