@@ -320,3 +320,29 @@ on windows statiion was prepared xming packege and run
 <pre>
 apt-cache search git
 </pre>
+
+<p>17. </p>
+<pre>
+Comment. --Ping on ethernet level.
+arping 192.168.16.254
+</pre>
+
+<p>18. at </p>
+<pre>
+
+
+at hh:mm dd.mm.yy
+
+echo "shutdown -h +0 "  |  at now +20min
+
+#atq
+3   Thu Oct 18 10:25:00 2012 a linuxaria
+4   Thu Oct 18 20:00:00 2012 a linuxaria
+6   Fri Oct 19 00:00:00 2012 a linuxaria
+
+If you have to check task from at just run this: at -c #task
+Example:
+at -c identifier_task
+
+So you can see task 
+</pre>
