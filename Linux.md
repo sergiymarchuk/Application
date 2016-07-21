@@ -369,3 +369,15 @@ kill %n
 
 
 </pre>
+
+<p>20. Block device.</p>
+<pre>
+blkid
+lsblk
+lsscsi
+</pre>
+
+<p>21. </p>
+<pre>
+
+</pre>
