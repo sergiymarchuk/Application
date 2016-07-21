@@ -622,7 +622,7 @@ mc 14134 beast cwd DIR 8,1 4096 1 /mnt/addtional-disk
 
 </pre>
 
-<p>44. </p>
+<p>44. mail</p>
 <pre>
-
+#mail -s logs email@mx-servername.com < server.log отправить лог 
 </pre>
