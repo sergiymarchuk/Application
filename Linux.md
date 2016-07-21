@@ -546,7 +546,12 @@ git config --global user.email "you@example.com"
 git remote -v
 </pre>
 
-<p>38. </p>
+<p>38. html </p>
+<pre>
+<html><body><h1><a href="load/name_file_2010.rar">Please clik here for starting download</h1></body></html>--> (делаем ссылку на веб)
+</pre>
+
+<p>39. </p>
 <pre>
 
 </pre>
