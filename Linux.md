@@ -140,6 +140,21 @@ dmidecode -t baseboard
   connector
   slot
 
+# dmesg |grep DMI
+DMI 2.5 present.
+DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+
+# dmesg |grep DMI
+DMI 2.5 present.
+DMI: HP ProLiant DL380 Gen BIOS P40 10/25/2012
+
+# dmidecode -s system-product-name
+VirtualBox
+
+# dmidecode -s system-product-name
+...
+ProLiant DL380 p Gen8
+
 </pre>
 
 <p>8. Get info about page size  </p>
