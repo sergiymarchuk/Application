@@ -466,6 +466,7 @@ Comment. --After this command system will be caches again and we can get slowdow
 Comment. -- Virt память что используется многими процессами если однажны какйото процес загрузил либо или можуль то из памяти другой вызывает это а не запускается все заново 
 Comment. --RES сколько использует процесс vmstat inact vmstat active
 
+sync; echo 3 > /proc/sys/vm/drop_caches; sysctl -p
 </pre>
 
 <p>30. file</p>
