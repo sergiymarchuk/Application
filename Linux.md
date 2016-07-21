@@ -272,7 +272,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlhcNNOPNpoRBU8SEW/zn8pdpkcfp3J6Kn5Ob8J+8FVr/
 *  Start the TSM/ADSM GUI with:  dsm or dsm_afs                                  * 
 </pre>
 
-<p>14. </p>
+<p>14. Forward X over SSH. </p>
 <pre>
 Putty ..> Connection ..> SSS ..> Auth ..> X11 ..> Enabled X11 forwarding  (check box -- status ON)
 As example let's connect to internal linux server via ssh 
