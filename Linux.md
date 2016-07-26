@@ -634,7 +634,8 @@ rdesktop 192.168.100.55 -d domain -u user-name -p PASSWORD -f
 rdesktop extrnal-IP:3390 -d domain -u admin -p PASSWORD -f
 </pre>
 
-<p>46. </p>
+<p>46. /etc/sudoers</p>
 <pre>
-
+# Remark
+username              ALL=(ALL) NOPASSWD: /usr/bin/yum *
 </pre>
