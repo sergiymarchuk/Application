@@ -91,7 +91,7 @@ chmod +x /root/my-ansible-modules/download_file.py
 
 ## Create playbook file /root/play.yml
 
-```
+```yaml
 ---
 - hosts: app-servers
   tasks:
