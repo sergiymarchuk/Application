@@ -2,6 +2,7 @@
 
 ## Development environment:
 Ansible versions: 2.1
+
 OS: CentOS 7
 
 ## Update Ansible configuration file: /etc/ansible/ansible.cfg 
