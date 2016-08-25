@@ -9,8 +9,8 @@ mariadb_connection = MySQLdb.connect(host="localhost",    # your host, usually l
 cursor = mariadb_connection.cursor()
 
 #retrieving information
-some_name = 'Server'
-cursor.execute("SELECT serv_hostname_id,serv_hostname FROM serv_hostname_tab WHERE serv_hostname=%s", (some_name,))
+var_serv_hostname = 'Server'
+cursor.execute("SELECT serv_hostname_id,serv_hostname FROM serv_hostname_tab WHERE serv_hostname=%s", (var_serv_hostname,))
 '''
 for first_name, last_name in cursor:
     print("First name: {}, Last name: {}").format(serv_hostname_id,serv_hostname)
