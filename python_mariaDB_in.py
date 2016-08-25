@@ -1,21 +1,21 @@
 #!/usr/bin/python
 import MySQLdb
 
-mariadb_connection = MySQLdb.connect(host="localhost",    # your host, usually localhost
-                     user="root",         # your username
-                     passwd="123456",  # your password
-                     db="serv_info")        # name of the data base
+mariadb_connection = MySQLdb.connect(host="localhost",   
+                     user="root",        
+                     passwd="123456",  
+                     db="serv_info")        
 
 cursor = mariadb_connection.cursor()
 
-#retrieving information
+
 var_serv_hostname = 'Server'
 cursor.execute("SELECT serv_hostname_id,serv_hostname FROM serv_hostname_tab WHERE serv_hostname=%s", (var_serv_hostname,))
 '''
 for first_name, last_name in cursor:
     print("ID: {}, Server name: {}").format(serv_hostname_id,serv_hostname)
 '''
-#insert information
+#insert 
 try:
     cursor.execute("INSERT INTO serv_hostname_tab (serv_hostname) VALUES (%s)", ('Maria DB'))
 except mariadb.Error as error:
